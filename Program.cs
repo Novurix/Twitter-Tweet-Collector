@@ -47,7 +47,7 @@ namespace Tweet_info
 
                     for (int tweetInputId = 0; tweetInputId < tweetInputs.Length; tweetInputId++) {
                         try {
-                            // since each hashtag is it's own html element, we're putting them in an array of IWebElements
+                            // since each hashtag is it's own html element, we're putting them in an array of IWebElements to later extact the text
                             tweetInputs[tweetInputId] = driver.FindElement(
                             By.XPath("//*[@id='react-root']/div/div/div[2]/main/div/div/div/div[1]/div/div[2]/div/div/section/div/div/div/div[" + (tweetId + 1).ToString() + "]/div/div/article/div/div/div/div[2]/div[2]/div[2]/div[1]/div/span[" + (tweetInputId+1).ToString() + "]"));
 
